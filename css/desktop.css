@@ -1,0 +1,17 @@
+.main-currency-table {
+    width: 320px;
+    margin: 0 30px 0 auto;
+}
+
+.main-commission-table {
+    width: 320px;
+    margin: 0 auto 0 30px;
+}
+
+.main-currency-table .currency-table--title, .main-commission-table .commission-table--title {
+    margin-bottom: 15px;
+}
+
+.plans-container--slider {
+    justify-content: space-around;
+}

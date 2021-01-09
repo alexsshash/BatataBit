@@ -189,6 +189,8 @@ main {
 }
 
 .main-currency-table .currency-table--title {
+    max-width: 300px;
+    margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 20px;
@@ -200,6 +202,8 @@ main {
 }
 
 .main-commission-table .commission-table--title {
+    max-width: 300px;
+    margin: 0 auto;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 20px;
@@ -431,6 +435,7 @@ main {
     background-image: url('./assets/images/bitcoinbaby2x.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     text-align: center;
 }
 
@@ -613,6 +618,7 @@ main {
 footer {
     display: flex;
     width: 100%;
+    min-width: 320px;
     height: 150px;
     background-color: var(--bitcoin-orange);
 }
@@ -638,4 +644,30 @@ footer .left ul {
 .left a {
     text-decoration: none;
     color: var(--just-white);
+}
+
+@media screen and (min-width: 500px) {
+    .main-tables-container .space {
+        width: 10px;
+        padding: 10px;
+    }
+    
+    .exchange--arrow-right {
+        background-image: none;
+    }
+}
+
+@media screen and (min-width: 630px) {
+    .arrow-left, .arrow-right {
+        background-image: none;
+    }
+
+    .plans-container--slider .slider--space {
+        padding: 1%;
+    }
+
+    .main-currency-table .currency-table--title, .main-commission-table .commission-table--title {
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
 }
