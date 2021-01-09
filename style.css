@@ -150,6 +150,28 @@ main {
     color: #757575;
 }
 
+.main-tables-container {
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.space:nth-of-type(1) {
+    width: 10%;
+    padding: 10%;
+}
+
+.space:nth-of-type(3) {
+    width: 10%;
+    padding: 10%;
+}
+
+.space:nth-of-type(5) {
+    width: 10%;
+    padding: 10%;
+}
+
 .main-currency-table, .main-commission-table {
     width: 70%;
     min-width: 235px;
@@ -158,11 +180,16 @@ main {
     font-family: 'Inter', sans-serif;
 }
 
+.main-currency-table {
+    scroll-snap-align: center;
+}
+
 .main-commission-table {
-    margin-top: 25px;
+    scroll-snap-align: center
 }
 
 .main-currency-table .currency-table--title {
+    margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 20px;
     font-size: 1.8rem;
@@ -173,6 +200,7 @@ main {
 }
 
 .main-commission-table .commission-table--title {
+    margin-top: 15px;
     margin-bottom: 15px;
     margin-left: 20px;
     font-size: 1.8rem;
@@ -186,11 +214,11 @@ main {
     width: 90%;
     min-width: 230px;
     max-width: 300px;
-    height: 250px;
+    height: auto;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 39px);
     gap: 2px;
     justify-content: center;
 }
@@ -281,6 +309,23 @@ main {
     padding: 8px;
     background-color: var(--soft-blue);
     border-radius: 8px;
+}
+
+.exchange--arrows {
+    position: relative;
+}
+
+.exchange--arrow-right {
+    position: absolute;
+    display: inline-block;
+    bottom: 163px;
+    right: 7px;
+    width: 25px;
+    height: 25px;
+    background-image: url('./assets/icons/arrow-right-black.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .main-product-detail {
@@ -428,13 +473,67 @@ main {
     color: #757575;
 }
 
+.plans-container--slider {
+    display: flex;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.position {
+    position: relative;
+}
+
+.arrow-left {
+    position: absolute;
+    display: inline-block;
+    bottom: 135px;
+    left: 7px;
+    width: 25px;
+    height: 25px;
+    background-image: url('./assets/icons/arrow-left.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.arrow-right {
+    position: absolute;
+    display: inline-block;
+    bottom: 135px;
+    right: 7px;
+    width: 25px;
+    height: 25px;
+    background-image: url('./assets/icons/arrow-right.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slider--space {
+    width: 5%;
+    padding: 5%;
+}
+
+.slider--space:nth-of-type(1) {
+    width: 10%;
+    padding: 10%;
+}
+
+.slider--space:nth-of-type(4) {
+    width: 10%;
+    padding: 10%;
+}
+
 .plans-container--card {
     position: relative;
+    scroll-snap-align: center;
     width: 70%;
-    min-width: 230px;
+    min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px auto 0;
+    margin-top: 50px;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
@@ -443,12 +542,12 @@ main {
 
 .recommended {
     position: absolute;
-    width: 120px;
+    width: 101px;
     height: 31px;
     padding: 6px;
     top: -15px;
     font-size: 1.2rem;
-    left: calc(50% - 60px);
+    left: calc(50% - 50.5px);
     background-color: var(--bitcoin-orange);
     border-radius: 8px;
     color: var(--just-white);
@@ -457,7 +556,7 @@ main {
 .plan-card--title {
     padding-top: 30px;
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 800;
     line-height: 1.8rem;
     color: black;
 }
@@ -509,4 +608,34 @@ main {
     width: 24px;
     height: 24px;
     background-image: url('./assets/icons/orange-arrow-right.svg');
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+
+.left li {
+    margin: 10px 0;
+}
+
+.left a {
+    text-decoration: none;
+    color: var(--just-white);
 }
